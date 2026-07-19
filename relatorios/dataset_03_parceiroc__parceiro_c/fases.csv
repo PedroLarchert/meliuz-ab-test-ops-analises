@@ -1,0 +1,2 @@
+﻿teste_id,parceiro,fase_id,data_inicio,data_fim,dias,quantidade_grupos,taxa_comissao,contraste_cashback,configuracao_cashback,taxas_cashback_json,status_fase
+dataset_03_parceiroc,Parceiro C,1,2011-07-01,2011-08-14,45,2,0.070000394310825,0.019998702189165295,Grupo 1=5.00%; Grupo 2=7.00%,"{""Grupo 1"": 0.05000114523924048, ""Grupo 2"": 0.06999984742840577}",valida

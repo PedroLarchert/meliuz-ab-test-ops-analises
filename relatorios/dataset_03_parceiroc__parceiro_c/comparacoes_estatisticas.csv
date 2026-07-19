@@ -1,0 +1,4 @@
+﻿teste_id,parceiro,fase_id,grupo_controle,grupo_variante,metrica,dias_pareados,media_controle,media_variante,diferenca_media,uplift_percentual,limite_inferior_95,limite_superior_95,valor_p_permutacao
+dataset_03_parceiroc,Parceiro C,1,Grupo 1,Grupo 2,compradores,45,101.08888888888889,100.4888888888889,-0.6,-0.005935370411079277,-10.689444444444444,8.933333333333334,0.9105044747762612
+dataset_03_parceiroc,Parceiro C,1,Grupo 1,Grupo 2,vendas_totais,45,38632.444444444445,37449.666666666664,-1182.7777777777778,-0.030616177536440414,-5379.348888888889,2915.6494444444434,0.5862206889655517
+dataset_03_parceiroc,Parceiro C,1,Grupo 1,Grupo 2,margem,45,772.6444444444444,0.0,-772.6444444444444,-1.0,-831.5555555555555,-714.9327777777777,4.999750012499375e-05

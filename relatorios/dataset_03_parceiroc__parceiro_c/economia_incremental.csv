@@ -1,0 +1,2 @@
+﻿teste_id,parceiro,fase_id,grupo_controle,grupo_variante,delta_compradores_dia,delta_vendas_dia,delta_cashback_dia,delta_margem_dia,custo_cashback_por_comprador_incremental,uplift_gmv_observado,uplift_gmv_break_even
+dataset_03_parceiroc,Parceiro C,1,Grupo 1,Grupo 2,-0.5999999999999943,-1182.777777777781,689.8444444444447,-772.6444444444444,,-0.030616177536440414,inf

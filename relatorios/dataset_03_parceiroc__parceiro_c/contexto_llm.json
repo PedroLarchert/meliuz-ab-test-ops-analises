@@ -1,0 +1,150 @@
+{
+  "objetivo": "Escolher a variante de cashback para 100% do trafego.",
+  "decisao_deterministica": {
+    "teste_id": "dataset_03_parceiroc",
+    "parceiro": "Parceiro C",
+    "descricao": "Teste com 2 grupo(s), 1 fase(s), de 2011-07-01 a 2011-08-14.",
+    "resultado": "Maior margem diária na fase principal: Grupo 1, R$ 772,64; GMV diário de R$ 38.632,44.",
+    "status": "escalar",
+    "variante_recomendada": "Grupo 1",
+    "decisao": "Escalar Grupo 1: apresentou a maior margem e as variantes ficaram abaixo do controle no intervalo de confiança.",
+    "fase_principal": 1,
+    "quantidade_fases": 1,
+    "alertas": "A projeção pressupõe tráfego equilibrado entre os grupos."
+  },
+  "fases": [
+    {
+      "teste_id": "dataset_03_parceiroc",
+      "parceiro": "Parceiro C",
+      "fase_id": 1,
+      "data_inicio": "2011-07-01T00:00:00.000",
+      "data_fim": "2011-08-14T00:00:00.000",
+      "dias": 45,
+      "quantidade_grupos": 2,
+      "taxa_comissao": 0.0700003943,
+      "contraste_cashback": 0.0199987022,
+      "configuracao_cashback": "Grupo 1=5.00%; Grupo 2=7.00%",
+      "taxas_cashback_json": "{\"Grupo 1\": 0.05000114523924048, \"Grupo 2\": 0.06999984742840577}",
+      "status_fase": "valida"
+    }
+  ],
+  "resumo_variantes": [
+    {
+      "teste_id": "dataset_03_parceiroc",
+      "parceiro": "Parceiro C",
+      "fase_id": 1,
+      "grupo": "Grupo 1",
+      "dias": 45,
+      "compradores": 4549,
+      "comissao": 121693,
+      "cashback": 86924,
+      "vendas_totais": 1738460,
+      "margem": 34769,
+      "compradores_dia": 101.0888888889,
+      "vendas_dia": 38632.4444444444,
+      "margem_dia": 772.6444444444,
+      "taxa_comissao": 0.0700004602,
+      "taxa_cashback": 0.0500005752,
+      "taxa_margem": 0.019999885,
+      "ticket_medio": 382.163112772,
+      "margem_por_comprador": 7.6432182897,
+      "projecao_margem_100_trafego": 46358.6666666667,
+      "dias_projecao": 30
+    },
+    {
+      "teste_id": "dataset_03_parceiroc",
+      "parceiro": "Parceiro C",
+      "fase_id": 1,
+      "grupo": "Grupo 2",
+      "dias": 45,
+      "compradores": 4522,
+      "comissao": 117967,
+      "cashback": 117967,
+      "vendas_totais": 1685235,
+      "margem": 0,
+      "compradores_dia": 100.4888888889,
+      "vendas_dia": 37449.6666666667,
+      "margem_dia": 0.0,
+      "taxa_comissao": 0.0700003264,
+      "taxa_cashback": 0.0700003264,
+      "taxa_margem": 0.0,
+      "ticket_medio": 372.6747014595,
+      "margem_por_comprador": 0.0,
+      "projecao_margem_100_trafego": 0.0,
+      "dias_projecao": 30
+    }
+  ],
+  "comparacoes_estatisticas": [
+    {
+      "teste_id": "dataset_03_parceiroc",
+      "parceiro": "Parceiro C",
+      "fase_id": 1,
+      "grupo_controle": "Grupo 1",
+      "grupo_variante": "Grupo 2",
+      "metrica": "compradores",
+      "dias_pareados": 45,
+      "media_controle": 101.0888888889,
+      "media_variante": 100.4888888889,
+      "diferenca_media": -0.6,
+      "uplift_percentual": -0.0059353704,
+      "limite_inferior_95": -10.6894444444,
+      "limite_superior_95": 8.9333333333,
+      "valor_p_permutacao": 0.9105044748
+    },
+    {
+      "teste_id": "dataset_03_parceiroc",
+      "parceiro": "Parceiro C",
+      "fase_id": 1,
+      "grupo_controle": "Grupo 1",
+      "grupo_variante": "Grupo 2",
+      "metrica": "vendas_totais",
+      "dias_pareados": 45,
+      "media_controle": 38632.4444444444,
+      "media_variante": 37449.6666666667,
+      "diferenca_media": -1182.7777777778,
+      "uplift_percentual": -0.0306161775,
+      "limite_inferior_95": -5379.3488888889,
+      "limite_superior_95": 2915.6494444444,
+      "valor_p_permutacao": 0.586220689
+    },
+    {
+      "teste_id": "dataset_03_parceiroc",
+      "parceiro": "Parceiro C",
+      "fase_id": 1,
+      "grupo_controle": "Grupo 1",
+      "grupo_variante": "Grupo 2",
+      "metrica": "margem",
+      "dias_pareados": 45,
+      "media_controle": 772.6444444444,
+      "media_variante": 0.0,
+      "diferenca_media": -772.6444444444,
+      "uplift_percentual": -1.0,
+      "limite_inferior_95": -831.5555555556,
+      "limite_superior_95": -714.9327777778,
+      "valor_p_permutacao": 4.99975e-05
+    }
+  ],
+  "economia_incremental": [
+    {
+      "teste_id": "dataset_03_parceiroc",
+      "parceiro": "Parceiro C",
+      "fase_id": 1,
+      "grupo_controle": "Grupo 1",
+      "grupo_variante": "Grupo 2",
+      "delta_compradores_dia": -0.6,
+      "delta_vendas_dia": -1182.7777777778,
+      "delta_cashback_dia": 689.8444444444,
+      "delta_margem_dia": -772.6444444444,
+      "custo_cashback_por_comprador_incremental": null,
+      "uplift_gmv_observado": -0.0306161775,
+      "uplift_gmv_break_even": null
+    }
+  ],
+  "alertas_qualidade": [],
+  "limitacoes_obrigatorias": [
+    "Os dados sao agregados por dia e nao possuem usuarios expostos por grupo.",
+    "A projecao para 100% assume divisao equilibrada de trafego.",
+    "Os dados nao permitem modelar propensao individual.",
+    "Mudancas persistentes de taxa devem ser analisadas como fases diferentes."
+  ]
+}
