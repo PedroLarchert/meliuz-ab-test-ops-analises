@@ -146,6 +146,10 @@ def gerar_relatorio_markdown(
 **Status:** `{decisao['status']}`  
 **Variante recomendada:** `{decisao['variante_recomendada']}`
 
+### Leitura executiva
+
+Substitua este texto por uma conclusao executiva baseada somente nos dados calculados.
+
 ## Fases detectadas
 
 {_tabela_markdown(linhas_fases, ['Fase', 'Início', 'Fim', 'Dias', 'Cashback por grupo', 'Comissão', 'Status'])}
@@ -167,6 +171,10 @@ def gerar_relatorio_markdown(
 {decisao['decisao']}
 
 Antes da implantação, valide a quantidade de usuários expostos em cada grupo. Sem esse denominador, compradores representam volume observado, não taxa de conversão.
+
+### Próximos passos
+
+Substitua este texto por acoes objetivas, riscos e validacoes recomendadas.
 
 ## Limitações
 

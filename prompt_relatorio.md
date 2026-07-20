@@ -22,12 +22,12 @@ Leia integralmente o arquivo `contexto_llm.json` gerado pelo pipeline. Todos os 
 
 ## Estrutura da resposta
 
-1. Resumo executivo em até cinco linhas.
-2. Decisão: variante recomendada ou motivo para não escalar.
-3. Evidências econômicas: margem, GMV, compradores e break-even.
-4. Evidências estatísticas: uplift, intervalo de confiança e consistência diária.
-5. Fases e integridade do experimento.
-6. Riscos, limitações e próximos passos.
+Preserve os títulos e as tabelas já criados em `relatorio.md`. Preencha obrigatoriamente:
+
+1. `### Leitura executiva`: conclusão em até cinco linhas com decisão, principal evidência econômica e principal risco.
+2. `### Próximos passos`: ações objetivas, validações e condição para implantação ou reexecução.
+
+Nas demais seções, mantenha a decisão, as evidências econômicas, a inferência estatística, as fases e as limitações calculadas pelo Python.
 
 ## Pergunta central
 

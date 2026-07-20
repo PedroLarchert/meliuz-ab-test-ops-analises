@@ -16,6 +16,7 @@ Isso é tudo. As instruções do [`AGENTS.md`](AGENTS.md) orientam o agente a:
 - instalar as dependências;
 - analisar todos os CSVs da pasta `data`;
 - revisar os relatórios executivos;
+- inserir as conclusões revisadas na planilha;
 - apresentar as decisões e os arquivos gerados.
 
 Para analisar novos testes, substitua ou adicione CSVs em `data` mantendo o mesmo schema e repita o pedido. Não é necessário alterar o código.
@@ -60,7 +61,8 @@ Compradores e GMV são guardrails. A solução evita forçar um vencedor quando 
 
 ```text
 CSV(s) -> validação -> fases -> métricas -> comparação estatística
-       -> decisão determinística -> revisão do agente -> relatórios
+       -> decisão determinística -> planilha-base -> revisão do agente
+       -> inserção das narrativas -> entrega
 ```
 
 ### 1. Preparação pelo agente
@@ -118,9 +120,10 @@ O Python é a fonte de todos os números e da decisão inicial. Para cada teste,
 2. verifica se a narrativa está coerente com os dados calculados;
 3. explica o impacto econômico, os guardrails e as limitações em linguagem executiva;
 4. complementa o relatório sem modificar ou inventar valores;
-5. apresenta a recomendação e atualiza os arquivos de acompanhamento.
+5. executa a etapa narrativa da planilha, que copia as conclusões dos relatórios revisados para o dashboard e para cada aba de teste;
+6. apresenta a recomendação e confere os arquivos de acompanhamento.
 
-A LLM não substitui a regra estatística nem calcula métricas pelo prompt. Seu papel é interpretar, revisar e comunicar o resultado produzido pelo Python.
+A planilha também segue essa separação: o pipeline recria métricas, gráficos, qualidade e decisões do zero; depois o agente preenche somente `Justificativa principal`, `Leitura gerencial e riscos`, `Próximos passos` e `Síntese do agente`. A LLM não substitui a regra estatística nem calcula métricas pelo prompt.
 
 ## Arquitetura
 
@@ -162,6 +165,8 @@ python -m venv .venv
 $python_venv = if (Test-Path ".venv\Scripts\python.exe") { ".venv\Scripts\python.exe" } else { ".venv\bin\python.exe" }
 & $python_venv -m pip install -e .
 & $python_venv -m analise_ab
+# Depois da revisão dos arquivos relatorio.md:
+& $python_venv -m analise_ab.planilha
 ```
 
 No Linux ou macOS:
@@ -170,6 +175,8 @@ No Linux ou macOS:
 python3 -m venv .venv
 .venv/bin/python -m pip install -e .
 .venv/bin/python -m analise_ab
+# Depois da revisão dos arquivos relatorio.md:
+.venv/bin/python -m analise_ab.planilha
 ```
 
 Por padrão, o comando lê `data` e grava em `relatorios`. Para um arquivo específico:

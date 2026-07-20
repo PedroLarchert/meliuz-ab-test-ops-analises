@@ -33,9 +33,15 @@ Se o ambiente já existir, reutilize-o e execute novamente a instalação antes 
 
 1. Localize cada pasta criada em `relatorios`.
 2. Leia `prompt_relatorio.md` e o arquivo `contexto_llm.json` de cada teste.
-3. Revise `relatorio.md` para deixar a narrativa executiva clara, sem alterar números calculados.
-4. Confirme que `relatorios/acompanhamento_testes.csv` foi atualizado.
-5. Confirme que `relatorios/Resultados_Testes_AB_Meliuz.xlsx` foi recriada.
-6. Informe ao usuário a decisão de cada teste, as limitações e os caminhos dos arquivos gerados.
+3. Revise `relatorio.md`, preenchendo `### Leitura executiva` e `### Próximos passos` sem alterar números calculados.
+4. Insira as narrativas revisadas na planilha com:
+
+```powershell
+& $python_venv -m analise_ab.planilha
+```
+
+5. Confirme que `relatorios/acompanhamento_testes.csv` foi atualizado.
+6. Confirme que `relatorios/Resultados_Testes_AB_Meliuz.xlsx` foi recriada e recebeu as conclusões do agente.
+7. Informe ao usuário a decisão de cada teste, as limitações e os caminhos dos arquivos gerados.
 
 Nunca calcule métricas financeiras apenas pelo prompt. O código Python é a fonte dos números; a LLM é responsável pela interpretação e comunicação.
